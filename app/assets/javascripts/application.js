@@ -31,6 +31,9 @@ var page_load = function(){
 var ajax_complete = function(){
   console.log('ajax:complete');
 }
+var ajaxComplete = function(){
+  console.log('ajaxComplete');
+}
 $(function(){
   $(document).ready(initialize_modules);
   $(document).on('page:load', initialize_modules);
@@ -39,4 +42,5 @@ $(function(){
   $(document).ready(ready);
   $(document).on('page:load', page_load);
   $(document).on('ajax:complete', ajax_complete);
+  $(document).on('ajaxComplete', ajaxComplete);
 });
